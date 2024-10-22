@@ -1,15 +1,7 @@
 # Threads
-Axel Zielonka - 110310
-
-> [!IMPORTANT]
-> ##### Reentrega:
-> Intenté modificar y corregir la mayor cantidad de cosas que fueron corregidas de la primera entrega. Sin embargo, algunas de esas cuando las intente cambiar el código dejaba de funcionar correctamente, por lo que decidí dejarlo como estaba originalmente (asegurandome de que era funcional). Estas cosas son:
-> * Los ClientThread en el hilo aceptador son creados con `new`, en vez de con `emplace_back`.
-> * Mantuve el método `terminar_juego` en el hilo procesador, en vez de ponerlo en el destructor. Lo que cambié es que este método únicamente cambia el estado del atomic _juego_activo_, haciendo que cuando se llame a este método, el loop principal del procesador se deje de ejecutar.
-
 
 # Aclaracion sobre Queue:
-A diferencia de la primera entrega, la clase Queue utilizada en este trabajo es la clase template que está en el directorio libs del hands-on-threads. Decidí que sería una BoundedQueue, ya que considere que es mejor tener que esperar a algún cliente más lento a perder información. Tomé como valor máximo de mensajes posibles el número 30, ya que me pareció un número lo suficientemente grande como para no generar que se bloqueen las queues constantemente, pero no tan grande como para que básicamente se convierta en una UnboundedQueue.
+La clase Queue utilizada en este trabajo es la clase template que está en el directorio libs del hands-on-threads. Decidí que sería una BoundedQueue, ya que considere que es mejor tener que esperar a algún cliente más lento a perder información. Tomé como valor máximo de mensajes posibles el número 30, ya que me pareció un número lo suficientemente grande como para no generar que se bloqueen las queues constantemente, pero no tan grande como para que básicamente se convierta en una UnboundedQueue.
 
 # Licencia:
 GPL v2
