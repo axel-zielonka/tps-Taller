@@ -6,9 +6,9 @@
 #include <string>
 #include <vector>
 
-#include "armamento.h"
-#include "protocol.h"
-#include "socket.h"
+#include "../common_src/armamento.h"
+#include "../common_src/protocol.h"
+#include "../common_src/socket.h"
 class Server {
 
 private:

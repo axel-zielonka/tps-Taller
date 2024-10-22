@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "server.h"
+#include "server_src/server.h"
 
 int main(int argc, const char* argv[]) {
     if (argc != 2) {
